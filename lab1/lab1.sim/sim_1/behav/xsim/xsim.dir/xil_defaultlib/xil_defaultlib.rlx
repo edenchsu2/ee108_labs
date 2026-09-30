@@ -1,0 +1,13 @@
+0.6
+2019.2
+Nov  6 2019
+21:42:20
+/home/users/achsu2/Desktop/EE108_Labs/lab1/lab1.sim/sim_1/behav/xsim/glbl.v,1573089660,verilog,,,,glbl,,,,,,,,
+/home/users/achsu2/Desktop/EE108_Labs/lab1/lab1starterfiles/arbiter.v,1790630792,verilog,,/home/users/achsu2/Desktop/EE108_Labs/lab1/lab1starterfiles/encoder.v,,arbiter,,,../../../../lab1.srcs/sources_1/ip/clk_wiz_0,,,,,
+/home/users/achsu2/Desktop/EE108_Labs/lab1/lab1starterfiles/arbiter_tb.v,1790631276,verilog,,,,arbiter_tb,,,../../../../lab1.srcs/sources_1/ip/clk_wiz_0,,,,,
+/home/users/achsu2/Desktop/EE108_Labs/lab1/lab1starterfiles/cam.v,1790800060,verilog,,/home/users/achsu2/Desktop/EE108_Labs/lab1/lab1starterfiles/encoder.v,,cam,,,../../../../lab1.srcs/sources_1/ip/clk_wiz_0,,,,,
+/home/users/achsu2/Desktop/EE108_Labs/lab1/lab1starterfiles/cam_tb.v,1610394034,verilog,,,,cam_tb,,,../../../../lab1.srcs/sources_1/ip/clk_wiz_0,,,,,
+/home/users/achsu2/Desktop/EE108_Labs/lab1/lab1starterfiles/encoder.v,1790628979,verilog,,/home/users/achsu2/Desktop/EE108_Labs/lab1/lab1starterfiles/cam_tb.v,,encoder,,,../../../../lab1.srcs/sources_1/ip/clk_wiz_0,,,,,
+/home/users/achsu2/Desktop/EE108_Labs/lab1/lab1starterfiles/encoder_tb.v,1610394034,verilog,,,,encoder_tb,,,../../../../lab1.srcs/sources_1/ip/clk_wiz_0,,,,,
+/home/users/achsu2/Desktop/EE108_Labs/lab1/lab1starterfiles/length_finder.v,1790639659,verilog,,/home/users/achsu2/Desktop/EE108_Labs/lab1/lab1starterfiles/length_finder_tb.v,,length_finder,,,../../../../lab1.srcs/sources_1/ip/clk_wiz_0,,,,,
+/home/users/achsu2/Desktop/EE108_Labs/lab1/lab1starterfiles/length_finder_tb.v,1790641648,verilog,,,,length_finder_tb,,,../../../../lab1.srcs/sources_1/ip/clk_wiz_0,,,,,

@@ -1,0 +1,4 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/users/achsu2/Desktop/EE108_Labs/lab1/lab1starterfiles/cam.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cam
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/users/achsu2/Desktop/EE108_Labs/lab1/lab1starterfiles/cam_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cam_tb

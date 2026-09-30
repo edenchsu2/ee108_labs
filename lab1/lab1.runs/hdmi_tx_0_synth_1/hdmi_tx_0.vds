@@ -1,0 +1,526 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Mon Sep 28 13:30:08 2026
+# Process ID: 941747
+# Current directory: /home/users/achsu2/Desktop/EE108_Labs/lab1/lab1.runs/hdmi_tx_0_synth_1
+# Command line: vivado -log hdmi_tx_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source hdmi_tx_0.tcl
+# Log file: /home/users/achsu2/Desktop/EE108_Labs/lab1/lab1.runs/hdmi_tx_0_synth_1/hdmi_tx_0.vds
+# Journal file: /home/users/achsu2/Desktop/EE108_Labs/lab1/lab1.runs/hdmi_tx_0_synth_1/vivado.jou
+#-----------------------------------------------------------
+source hdmi_tx_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/users/achsu2/Desktop/EE108_Labs/hdmi_tx_ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/cad/xilinx/vivado/2019.2/Vivado/2019.2/data/ip'.
+Command: synth_design -top hdmi_tx_0 -part xc7z020clg400-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 942239 
+WARNING: [Synth 8-2507] parameter declaration becomes local in encode with formal parameter declaration list [/home/users/achsu2/Desktop/EE108_Labs/lab1/lab1.srcs/sources_1/ip/hdmi_tx_0/hdl/encode.v:146]
+WARNING: [Synth 8-2507] parameter declaration becomes local in encode with formal parameter declaration list [/home/users/achsu2/Desktop/EE108_Labs/lab1/lab1.srcs/sources_1/ip/hdmi_tx_0/hdl/encode.v:147]
+WARNING: [Synth 8-2507] parameter declaration becomes local in encode with formal parameter declaration list [/home/users/achsu2/Desktop/EE108_Labs/lab1/lab1.srcs/sources_1/ip/hdmi_tx_0/hdl/encode.v:148]
+WARNING: [Synth 8-2507] parameter declaration becomes local in encode with formal parameter declaration list [/home/users/achsu2/Desktop/EE108_Labs/lab1/lab1.srcs/sources_1/ip/hdmi_tx_0/hdl/encode.v:149]
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 1751.227 ; gain = 211.590 ; free physical = 104398 ; free virtual = 178080
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'hdmi_tx_0' [/home/users/achsu2/Desktop/EE108_Labs/lab1/lab1.srcs/sources_1/ip/hdmi_tx_0/synth/hdmi_tx_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'hdmi_tx_v1_0' [/home/users/achsu2/Desktop/EE108_Labs/lab1/lab1.srcs/sources_1/ip/hdmi_tx_0/hdl/hdmi_tx_v1_0.v:73]
+	Parameter MODE bound to: DVI - type: string 
+	Parameter C_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_RED_WIDTH bound to: 8 - type: integer 
+	Parameter C_GREEN_WIDTH bound to: 8 - type: integer 
+	Parameter C_BLUE_WIDTH bound to: 8 - type: integer 
+	Parameter DILNDPREAM bound to: 4'b1010 
+	Parameter VIDEOPREAM bound to: 4'b1000 
+	Parameter NULLCONTRL bound to: 4'b0000 
+	Parameter SRL_DELAY bound to: 4'b0001 
+INFO: [Synth 8-6157] synthesizing module 'srldelay' [/home/users/achsu2/Desktop/EE108_Labs/lab1/lab1.srcs/sources_1/ip/hdmi_tx_0/hdl/srldelay.v:70]
+	Parameter WIDTH bound to: 40 - type: integer 
+	Parameter TAPS bound to: 4'b0001 
+INFO: [Synth 8-6157] synthesizing module 'SRL16E' [/cad/xilinx/vivado/2019.2/Vivado/2019.2/scripts/rt/data/unisim_comp.v:77965]
+	Parameter INIT bound to: 16'b0000000000000000 
+	Parameter IS_CLK_INVERTED bound to: 1'b0 
+INFO: [Synth 8-6155] done synthesizing module 'SRL16E' (1#1) [/cad/xilinx/vivado/2019.2/Vivado/2019.2/scripts/rt/data/unisim_comp.v:77965]
+INFO: [Synth 8-6155] done synthesizing module 'srldelay' (2#1) [/home/users/achsu2/Desktop/EE108_Labs/lab1/lab1.srcs/sources_1/ip/hdmi_tx_0/hdl/srldelay.v:70]
+INFO: [Synth 8-6157] synthesizing module 'encode' [/home/users/achsu2/Desktop/EE108_Labs/lab1/lab1.srcs/sources_1/ip/hdmi_tx_0/hdl/encode.v:80]
+	Parameter CHANNEL bound to: BLUE - type: string 
+	Parameter MODE bound to: DVI - type: string 
+	Parameter VIDEOGBND bound to: 10'b1011001100 
+	Parameter DILNDGBND bound to: 10'bxxxxxxxxxx 
+	Parameter CTRLTOKEN0 bound to: 10'b1101010100 
+	Parameter CTRLTOKEN1 bound to: 10'b0010101011 
+	Parameter CTRLTOKEN2 bound to: 10'b0101010100 
+	Parameter CTRLTOKEN3 bound to: 10'b1010101011 
+WARNING: [Synth 8-6014] Unused sequential element ade_q_reg was removed.  [/home/users/achsu2/Desktop/EE108_Labs/lab1/lab1.srcs/sources_1/ip/hdmi_tx_0/hdl/encode.v:175]
+WARNING: [Synth 8-6014] Unused sequential element ade_reg_reg was removed.  [/home/users/achsu2/Desktop/EE108_Labs/lab1/lab1.srcs/sources_1/ip/hdmi_tx_0/hdl/encode.v:176]
+WARNING: [Synth 8-6014] Unused sequential element ade_reg_q_reg was removed.  [/home/users/achsu2/Desktop/EE108_Labs/lab1/lab1.srcs/sources_1/ip/hdmi_tx_0/hdl/encode.v:177]
+WARNING: [Synth 8-6014] Unused sequential element ade_reg_qq_reg was removed.  [/home/users/achsu2/Desktop/EE108_Labs/lab1/lab1.srcs/sources_1/ip/hdmi_tx_0/hdl/encode.v:178]
+WARNING: [Synth 8-6014] Unused sequential element adin_q_reg was removed.  [/home/users/achsu2/Desktop/EE108_Labs/lab1/lab1.srcs/sources_1/ip/hdmi_tx_0/hdl/encode.v:185]
+WARNING: [Synth 8-6014] Unused sequential element adin_reg_reg was removed.  [/home/users/achsu2/Desktop/EE108_Labs/lab1/lab1.srcs/sources_1/ip/hdmi_tx_0/hdl/encode.v:186]
+INFO: [Synth 8-6155] done synthesizing module 'encode' (3#1) [/home/users/achsu2/Desktop/EE108_Labs/lab1/lab1.srcs/sources_1/ip/hdmi_tx_0/hdl/encode.v:80]
+INFO: [Synth 8-6157] synthesizing module 'encode__parameterized0' [/home/users/achsu2/Desktop/EE108_Labs/lab1/lab1.srcs/sources_1/ip/hdmi_tx_0/hdl/encode.v:80]
+	Parameter CHANNEL bound to: GREEN - type: string 
+	Parameter MODE bound to: DVI - type: string 
+	Parameter VIDEOGBND bound to: 10'b0100110011 
+	Parameter DILNDGBND bound to: 10'b0100110011 
+	Parameter CTRLTOKEN0 bound to: 10'b1101010100 
+	Parameter CTRLTOKEN1 bound to: 10'b0010101011 
+	Parameter CTRLTOKEN2 bound to: 10'b0101010100 
+	Parameter CTRLTOKEN3 bound to: 10'b1010101011 
+WARNING: [Synth 8-6014] Unused sequential element ade_q_reg was removed.  [/home/users/achsu2/Desktop/EE108_Labs/lab1/lab1.srcs/sources_1/ip/hdmi_tx_0/hdl/encode.v:175]
+WARNING: [Synth 8-6014] Unused sequential element ade_reg_reg was removed.  [/home/users/achsu2/Desktop/EE108_Labs/lab1/lab1.srcs/sources_1/ip/hdmi_tx_0/hdl/encode.v:176]
+WARNING: [Synth 8-6014] Unused sequential element ade_reg_q_reg was removed.  [/home/users/achsu2/Desktop/EE108_Labs/lab1/lab1.srcs/sources_1/ip/hdmi_tx_0/hdl/encode.v:177]
+WARNING: [Synth 8-6014] Unused sequential element ade_reg_qq_reg was removed.  [/home/users/achsu2/Desktop/EE108_Labs/lab1/lab1.srcs/sources_1/ip/hdmi_tx_0/hdl/encode.v:178]
+WARNING: [Synth 8-6014] Unused sequential element adin_q_reg was removed.  [/home/users/achsu2/Desktop/EE108_Labs/lab1/lab1.srcs/sources_1/ip/hdmi_tx_0/hdl/encode.v:185]
+WARNING: [Synth 8-6014] Unused sequential element adin_reg_reg was removed.  [/home/users/achsu2/Desktop/EE108_Labs/lab1/lab1.srcs/sources_1/ip/hdmi_tx_0/hdl/encode.v:186]
+INFO: [Synth 8-6155] done synthesizing module 'encode__parameterized0' (3#1) [/home/users/achsu2/Desktop/EE108_Labs/lab1/lab1.srcs/sources_1/ip/hdmi_tx_0/hdl/encode.v:80]
+INFO: [Synth 8-6157] synthesizing module 'encode__parameterized1' [/home/users/achsu2/Desktop/EE108_Labs/lab1/lab1.srcs/sources_1/ip/hdmi_tx_0/hdl/encode.v:80]
+	Parameter CHANNEL bound to: RED - type: string 
+	Parameter MODE bound to: DVI - type: string 
+	Parameter VIDEOGBND bound to: 10'b1011001100 
+	Parameter DILNDGBND bound to: 10'b0100110011 
+	Parameter CTRLTOKEN0 bound to: 10'b1101010100 
+	Parameter CTRLTOKEN1 bound to: 10'b0010101011 
+	Parameter CTRLTOKEN2 bound to: 10'b0101010100 
+	Parameter CTRLTOKEN3 bound to: 10'b1010101011 
+WARNING: [Synth 8-6014] Unused sequential element ade_q_reg was removed.  [/home/users/achsu2/Desktop/EE108_Labs/lab1/lab1.srcs/sources_1/ip/hdmi_tx_0/hdl/encode.v:175]
+WARNING: [Synth 8-6014] Unused sequential element ade_reg_reg was removed.  [/home/users/achsu2/Desktop/EE108_Labs/lab1/lab1.srcs/sources_1/ip/hdmi_tx_0/hdl/encode.v:176]
+WARNING: [Synth 8-6014] Unused sequential element ade_reg_q_reg was removed.  [/home/users/achsu2/Desktop/EE108_Labs/lab1/lab1.srcs/sources_1/ip/hdmi_tx_0/hdl/encode.v:177]
+WARNING: [Synth 8-6014] Unused sequential element ade_reg_qq_reg was removed.  [/home/users/achsu2/Desktop/EE108_Labs/lab1/lab1.srcs/sources_1/ip/hdmi_tx_0/hdl/encode.v:178]
+WARNING: [Synth 8-6014] Unused sequential element adin_q_reg was removed.  [/home/users/achsu2/Desktop/EE108_Labs/lab1/lab1.srcs/sources_1/ip/hdmi_tx_0/hdl/encode.v:185]
+WARNING: [Synth 8-6014] Unused sequential element adin_reg_reg was removed.  [/home/users/achsu2/Desktop/EE108_Labs/lab1/lab1.srcs/sources_1/ip/hdmi_tx_0/hdl/encode.v:186]
+INFO: [Synth 8-6155] done synthesizing module 'encode__parameterized1' (3#1) [/home/users/achsu2/Desktop/EE108_Labs/lab1/lab1.srcs/sources_1/ip/hdmi_tx_0/hdl/encode.v:80]
+INFO: [Synth 8-6157] synthesizing module 'serdes_10_to_1' [/home/users/achsu2/Desktop/EE108_Labs/lab1/lab1.srcs/sources_1/ip/hdmi_tx_0/hdl/serdes_10_to_1.v:43]
+INFO: [Synth 8-6157] synthesizing module 'OSERDESE2' [/cad/xilinx/vivado/2019.2/Vivado/2019.2/scripts/rt/data/unisim_comp.v:50288]
+	Parameter DATA_RATE_OQ bound to: DDR - type: string 
+	Parameter DATA_RATE_TQ bound to: SDR - type: string 
+	Parameter DATA_WIDTH bound to: 10 - type: integer 
+	Parameter INIT_OQ bound to: 1'b0 
+	Parameter INIT_TQ bound to: 1'b0 
+	Parameter IS_CLKDIV_INVERTED bound to: 1'b0 
+	Parameter IS_CLK_INVERTED bound to: 1'b0 
+	Parameter IS_D1_INVERTED bound to: 1'b0 
+	Parameter IS_D2_INVERTED bound to: 1'b0 
+	Parameter IS_D3_INVERTED bound to: 1'b0 
+	Parameter IS_D4_INVERTED bound to: 1'b0 
+	Parameter IS_D5_INVERTED bound to: 1'b0 
+	Parameter IS_D6_INVERTED bound to: 1'b0 
+	Parameter IS_D7_INVERTED bound to: 1'b0 
+	Parameter IS_D8_INVERTED bound to: 1'b0 
+	Parameter IS_T1_INVERTED bound to: 1'b0 
+	Parameter IS_T2_INVERTED bound to: 1'b0 
+	Parameter IS_T3_INVERTED bound to: 1'b0 
+	Parameter IS_T4_INVERTED bound to: 1'b0 
+	Parameter SERDES_MODE bound to: MASTER - type: string 
+	Parameter SRVAL_OQ bound to: 1'b0 
+	Parameter SRVAL_TQ bound to: 1'b0 
+	Parameter TBYTE_CTL bound to: FALSE - type: string 
+	Parameter TBYTE_SRC bound to: FALSE - type: string 
+	Parameter TRISTATE_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'OSERDESE2' (4#1) [/cad/xilinx/vivado/2019.2/Vivado/2019.2/scripts/rt/data/unisim_comp.v:50288]
+INFO: [Synth 8-6157] synthesizing module 'OSERDESE2__parameterized0' [/cad/xilinx/vivado/2019.2/Vivado/2019.2/scripts/rt/data/unisim_comp.v:50288]
+	Parameter DATA_RATE_OQ bound to: DDR - type: string 
+	Parameter DATA_RATE_TQ bound to: SDR - type: string 
+	Parameter DATA_WIDTH bound to: 10 - type: integer 
+	Parameter INIT_OQ bound to: 1'b0 
+	Parameter INIT_TQ bound to: 1'b0 
+	Parameter IS_CLKDIV_INVERTED bound to: 1'b0 
+	Parameter IS_CLK_INVERTED bound to: 1'b0 
+	Parameter IS_D1_INVERTED bound to: 1'b0 
+	Parameter IS_D2_INVERTED bound to: 1'b0 
+	Parameter IS_D3_INVERTED bound to: 1'b0 
+	Parameter IS_D4_INVERTED bound to: 1'b0 
+	Parameter IS_D5_INVERTED bound to: 1'b0 
+	Parameter IS_D6_INVERTED bound to: 1'b0 
+	Parameter IS_D7_INVERTED bound to: 1'b0 
+	Parameter IS_D8_INVERTED bound to: 1'b0 
+	Parameter IS_T1_INVERTED bound to: 1'b0 
+	Parameter IS_T2_INVERTED bound to: 1'b0 
+	Parameter IS_T3_INVERTED bound to: 1'b0 
+	Parameter IS_T4_INVERTED bound to: 1'b0 
+	Parameter SERDES_MODE bound to: SLAVE - type: string 
+	Parameter SRVAL_OQ bound to: 1'b0 
+	Parameter SRVAL_TQ bound to: 1'b0 
+	Parameter TBYTE_CTL bound to: FALSE - type: string 
+	Parameter TBYTE_SRC bound to: FALSE - type: string 
+	Parameter TRISTATE_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'OSERDESE2__parameterized0' (4#1) [/cad/xilinx/vivado/2019.2/Vivado/2019.2/scripts/rt/data/unisim_comp.v:50288]
+INFO: [Synth 8-6155] done synthesizing module 'serdes_10_to_1' (5#1) [/home/users/achsu2/Desktop/EE108_Labs/lab1/lab1.srcs/sources_1/ip/hdmi_tx_0/hdl/serdes_10_to_1.v:43]
+INFO: [Synth 8-6157] synthesizing module 'OBUFDS' [/cad/xilinx/vivado/2019.2/Vivado/2019.2/scripts/rt/data/unisim_comp.v:46225]
+	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
+	Parameter IOSTANDARD bound to: TMDS_33 - type: string 
+	Parameter SLEW bound to: SLOW - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'OBUFDS' (6#1) [/cad/xilinx/vivado/2019.2/Vivado/2019.2/scripts/rt/data/unisim_comp.v:46225]
+INFO: [Synth 8-6155] done synthesizing module 'hdmi_tx_v1_0' (7#1) [/home/users/achsu2/Desktop/EE108_Labs/lab1/lab1.srcs/sources_1/ip/hdmi_tx_0/hdl/hdmi_tx_v1_0.v:73]
+INFO: [Synth 8-6155] done synthesizing module 'hdmi_tx_0' (8#1) [/home/users/achsu2/Desktop/EE108_Labs/lab1/lab1.srcs/sources_1/ip/hdmi_tx_0/synth/hdmi_tx_0.v:57]
+WARNING: [Synth 8-3331] design encode__parameterized1 has unconnected port adin[3]
+WARNING: [Synth 8-3331] design encode__parameterized1 has unconnected port adin[2]
+WARNING: [Synth 8-3331] design encode__parameterized1 has unconnected port adin[1]
+WARNING: [Synth 8-3331] design encode__parameterized1 has unconnected port adin[0]
+WARNING: [Synth 8-3331] design encode__parameterized1 has unconnected port ade
+WARNING: [Synth 8-3331] design encode__parameterized0 has unconnected port adin[3]
+WARNING: [Synth 8-3331] design encode__parameterized0 has unconnected port adin[2]
+WARNING: [Synth 8-3331] design encode__parameterized0 has unconnected port adin[1]
+WARNING: [Synth 8-3331] design encode__parameterized0 has unconnected port adin[0]
+WARNING: [Synth 8-3331] design encode__parameterized0 has unconnected port ade
+WARNING: [Synth 8-3331] design encode has unconnected port adin[3]
+WARNING: [Synth 8-3331] design encode has unconnected port adin[2]
+WARNING: [Synth 8-3331] design encode has unconnected port adin[1]
+WARNING: [Synth 8-3331] design encode has unconnected port adin[0]
+WARNING: [Synth 8-3331] design encode has unconnected port ade
+WARNING: [Synth 8-3331] design hdmi_tx_v1_0 has unconnected port pix_data[31]
+WARNING: [Synth 8-3331] design hdmi_tx_v1_0 has unconnected port pix_data[30]
+WARNING: [Synth 8-3331] design hdmi_tx_v1_0 has unconnected port pix_data[29]
+WARNING: [Synth 8-3331] design hdmi_tx_v1_0 has unconnected port pix_data[28]
+WARNING: [Synth 8-3331] design hdmi_tx_v1_0 has unconnected port pix_data[27]
+WARNING: [Synth 8-3331] design hdmi_tx_v1_0 has unconnected port pix_data[26]
+WARNING: [Synth 8-3331] design hdmi_tx_v1_0 has unconnected port pix_data[25]
+WARNING: [Synth 8-3331] design hdmi_tx_v1_0 has unconnected port pix_data[24]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 1790.102 ; gain = 250.465 ; free physical = 104459 ; free virtual = 178144
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 1804.945 ; gain = 265.309 ; free physical = 104445 ; free virtual = 178131
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 1812.949 ; gain = 273.312 ; free physical = 104445 ; free virtual = 178131
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/home/users/achsu2/Desktop/EE108_Labs/lab1/lab1.srcs/sources_1/ip/hdmi_tx_0/hdl/encode.v:223]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/home/users/achsu2/Desktop/EE108_Labs/lab1/lab1.srcs/sources_1/ip/hdmi_tx_0/hdl/encode.v:223]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/home/users/achsu2/Desktop/EE108_Labs/lab1/lab1.srcs/sources_1/ip/hdmi_tx_0/hdl/encode.v:223]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1822.855 ; gain = 283.219 ; free physical = 104403 ; free virtual = 178091
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   5 Input      5 Bit       Adders := 6     
+	   4 Input      5 Bit       Adders := 3     
+	   8 Input      4 Bit       Adders := 6     
+	   2 Input      4 Bit       Adders := 3     
++---XORs : 
+	   2 Input      1 Bit         XORs := 42    
++---Registers : 
+	               10 Bit    Registers := 3     
+	                9 Bit    Registers := 3     
+	                8 Bit    Registers := 3     
+	                5 Bit    Registers := 3     
+	                4 Bit    Registers := 9     
+	                1 Bit    Registers := 20    
++---Muxes : 
+	   5 Input     10 Bit        Muxes := 3     
+	   2 Input     10 Bit        Muxes := 6     
+	   2 Input      8 Bit        Muxes := 3     
+	   2 Input      5 Bit        Muxes := 12    
+	   2 Input      4 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 21    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module encode 
+Detailed RTL Component Info : 
++---Adders : 
+	   5 Input      5 Bit       Adders := 2     
+	   4 Input      5 Bit       Adders := 1     
+	   8 Input      4 Bit       Adders := 2     
+	   2 Input      4 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 14    
++---Registers : 
+	               10 Bit    Registers := 1     
+	                9 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 3     
+	                1 Bit    Registers := 6     
++---Muxes : 
+	   5 Input     10 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 2     
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 4     
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 7     
+Module encode__parameterized0 
+Detailed RTL Component Info : 
++---Adders : 
+	   5 Input      5 Bit       Adders := 2     
+	   4 Input      5 Bit       Adders := 1     
+	   8 Input      4 Bit       Adders := 2     
+	   2 Input      4 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 14    
++---Registers : 
+	               10 Bit    Registers := 1     
+	                9 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 3     
+	                1 Bit    Registers := 6     
++---Muxes : 
+	   5 Input     10 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 2     
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 4     
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 7     
+Module encode__parameterized1 
+Detailed RTL Component Info : 
++---Adders : 
+	   5 Input      5 Bit       Adders := 2     
+	   4 Input      5 Bit       Adders := 1     
+	   8 Input      4 Bit       Adders := 2     
+	   2 Input      4 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 14    
++---Registers : 
+	               10 Bit    Registers := 1     
+	                9 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 3     
+	                1 Bit    Registers := 6     
++---Muxes : 
+	   5 Input     10 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 2     
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 4     
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 7     
+Module hdmi_tx_v1_0 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-4471] merging register 'inst/encg/vde_q_reg' into 'inst/encb/vde_q_reg' [/home/users/achsu2/Desktop/EE108_Labs/lab1/lab1.srcs/sources_1/ip/hdmi_tx_0/hdl/encode.v:172]
+INFO: [Synth 8-4471] merging register 'inst/encg/vde_reg_reg' into 'inst/encb/vde_reg_reg' [/home/users/achsu2/Desktop/EE108_Labs/lab1/lab1.srcs/sources_1/ip/hdmi_tx_0/hdl/encode.v:173]
+INFO: [Synth 8-4471] merging register 'inst/encg/c1_q_reg' into 'inst/encg/c0_q_reg' [/home/users/achsu2/Desktop/EE108_Labs/lab1/lab1.srcs/sources_1/ip/hdmi_tx_0/hdl/encode.v:182]
+INFO: [Synth 8-4471] merging register 'inst/encg/c1_reg_reg' into 'inst/encg/c0_reg_reg' [/home/users/achsu2/Desktop/EE108_Labs/lab1/lab1.srcs/sources_1/ip/hdmi_tx_0/hdl/encode.v:183]
+INFO: [Synth 8-4471] merging register 'inst/encr/vde_q_reg' into 'inst/encb/vde_q_reg' [/home/users/achsu2/Desktop/EE108_Labs/lab1/lab1.srcs/sources_1/ip/hdmi_tx_0/hdl/encode.v:172]
+INFO: [Synth 8-4471] merging register 'inst/encr/vde_reg_reg' into 'inst/encb/vde_reg_reg' [/home/users/achsu2/Desktop/EE108_Labs/lab1/lab1.srcs/sources_1/ip/hdmi_tx_0/hdl/encode.v:173]
+INFO: [Synth 8-4471] merging register 'inst/encr/c0_q_reg' into 'inst/encg/c0_q_reg' [/home/users/achsu2/Desktop/EE108_Labs/lab1/lab1.srcs/sources_1/ip/hdmi_tx_0/hdl/encode.v:180]
+INFO: [Synth 8-4471] merging register 'inst/encr/c0_reg_reg' into 'inst/encg/c0_reg_reg' [/home/users/achsu2/Desktop/EE108_Labs/lab1/lab1.srcs/sources_1/ip/hdmi_tx_0/hdl/encode.v:181]
+INFO: [Synth 8-4471] merging register 'inst/encr/c1_q_reg' into 'inst/encg/c0_q_reg' [/home/users/achsu2/Desktop/EE108_Labs/lab1/lab1.srcs/sources_1/ip/hdmi_tx_0/hdl/encode.v:182]
+INFO: [Synth 8-4471] merging register 'inst/encr/c1_reg_reg' into 'inst/encg/c0_reg_reg' [/home/users/achsu2/Desktop/EE108_Labs/lab1/lab1.srcs/sources_1/ip/hdmi_tx_0/hdl/encode.v:183]
+WARNING: [Synth 8-3331] design hdmi_tx_0 has unconnected port pix_data[31]
+WARNING: [Synth 8-3331] design hdmi_tx_0 has unconnected port pix_data[30]
+WARNING: [Synth 8-3331] design hdmi_tx_0 has unconnected port pix_data[29]
+WARNING: [Synth 8-3331] design hdmi_tx_0 has unconnected port pix_data[28]
+WARNING: [Synth 8-3331] design hdmi_tx_0 has unconnected port pix_data[27]
+WARNING: [Synth 8-3331] design hdmi_tx_0 has unconnected port pix_data[26]
+WARNING: [Synth 8-3331] design hdmi_tx_0 has unconnected port pix_data[25]
+WARNING: [Synth 8-3331] design hdmi_tx_0 has unconnected port pix_data[24]
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/encg/c0_q_reg )
+INFO: [Synth 8-3886] merging instance 'inst/encb/n0q_m_reg[0]' (FD) to 'inst/encb/n1q_m_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/encg/n0q_m_reg[0]' (FD) to 'inst/encg/n1q_m_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/encr/n0q_m_reg[0]' (FD) to 'inst/encr/n1q_m_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/encg/c0_reg_reg' (FD) to 'inst/encg/c0_q_reg'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/encg/c0_q_reg )
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:16 . Memory (MB): peak = 1985.121 ; gain = 445.484 ; free physical = 104190 ; free virtual = 177883
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:17 . Memory (MB): peak = 1988.090 ; gain = 448.453 ; free physical = 104205 ; free virtual = 177898
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:10 ; elapsed = 00:00:17 . Memory (MB): peak = 1988.090 ; gain = 448.453 ; free physical = 104210 ; free virtual = 177902
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:13 ; elapsed = 00:00:20 . Memory (MB): peak = 1988.090 ; gain = 448.453 ; free physical = 104256 ; free virtual = 177949
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:13 ; elapsed = 00:00:20 . Memory (MB): peak = 1988.090 ; gain = 448.453 ; free physical = 104256 ; free virtual = 177949
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:13 ; elapsed = 00:00:20 . Memory (MB): peak = 1988.090 ; gain = 448.453 ; free physical = 104256 ; free virtual = 177949
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:13 ; elapsed = 00:00:20 . Memory (MB): peak = 1988.090 ; gain = 448.453 ; free physical = 104257 ; free virtual = 177950
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:13 ; elapsed = 00:00:20 . Memory (MB): peak = 1988.090 ; gain = 448.453 ; free physical = 104259 ; free virtual = 177952
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:13 ; elapsed = 00:00:20 . Memory (MB): peak = 1988.090 ; gain = 448.453 ; free physical = 104259 ; free virtual = 177952
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+----------+------+
+|      |Cell      |Count |
++------+----------+------+
+|1     |LUT2      |     9|
+|2     |LUT3      |    37|
+|3     |LUT4      |    23|
+|4     |LUT5      |    76|
+|5     |LUT6      |    99|
+|6     |OSERDESE2 |     8|
+|7     |SRL16E    |    27|
+|8     |FDCE      |    42|
+|9     |FDPE      |     2|
+|10    |FDRE      |    87|
+|11    |OBUFDS    |     4|
++------+----------+------+
+
+Report Instance Areas: 
++------+---------------+-----------------------+------+
+|      |Instance       |Module                 |Cells |
++------+---------------+-----------------------+------+
+|1     |top            |                       |   414|
+|2     |  inst         |hdmi_tx_v1_0           |   414|
+|3     |    encb       |encode                 |   128|
+|4     |    encg       |encode__parameterized0 |   122|
+|5     |    encr       |encode__parameterized1 |   122|
+|6     |    serial_b   |serdes_10_to_1         |     2|
+|7     |    serial_clk |serdes_10_to_1_0       |     2|
+|8     |    serial_g   |serdes_10_to_1_1       |     2|
+|9     |    serial_r   |serdes_10_to_1_2       |     2|
+|10    |    srldly_0   |srldelay               |    27|
++------+---------------+-----------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:13 ; elapsed = 00:00:20 . Memory (MB): peak = 1988.090 ; gain = 448.453 ; free physical = 104260 ; free virtual = 177953
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 53 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:20 . Memory (MB): peak = 1988.090 ; gain = 448.453 ; free physical = 104262 ; free virtual = 177955
+Synthesis Optimization Complete : Time (s): cpu = 00:00:13 ; elapsed = 00:00:20 . Memory (MB): peak = 1988.098 ; gain = 448.453 ; free physical = 104264 ; free virtual = 177956
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2004.117 ; gain = 0.000 ; free physical = 104212 ; free virtual = 177912
+INFO: [Netlist 29-17] Analyzing 4 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2124.895 ; gain = 0.000 ; free physical = 104119 ; free virtual = 177819
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+53 Infos, 53 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:17 ; elapsed = 00:00:32 . Memory (MB): peak = 2124.895 ; gain = 592.262 ; free physical = 104189 ; free virtual = 177889
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2124.895 ; gain = 0.000 ; free physical = 104189 ; free virtual = 177889
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Common 17-1381] The checkpoint '/home/users/achsu2/Desktop/EE108_Labs/lab1/lab1.runs/hdmi_tx_0_synth_1/hdmi_tx_0.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:07 ; elapsed = 00:00:11 . Memory (MB): peak = 2544.891 ; gain = 419.996 ; free physical = 103843 ; free virtual = 177544
+WARNING: [Common 17-576] 'use_project_ipc' is deprecated. This option is deprecated and no longer used.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP hdmi_tx_0, cache-ID = c6a84bc773e3e9ab
+INFO: [Coretcl 2-1174] Renamed 9 cell refs.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2544.891 ; gain = 0.000 ; free physical = 103803 ; free virtual = 177504
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint '/home/users/achsu2/Desktop/EE108_Labs/lab1/lab1.runs/hdmi_tx_0_synth_1/hdmi_tx_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file hdmi_tx_0_utilization_synth.rpt -pb hdmi_tx_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Sep 28 13:31:04 2026...
