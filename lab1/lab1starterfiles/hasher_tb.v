@@ -17,6 +17,9 @@ module hasher_tb ();
       in = 64'h0039373931414644;
       in_len = 4'd7;
       #5 $display("%h,%h,%h",in,in_len,out);
+      $display("fs=%h dir=%b out=%h", dut.final_state, dut.rotate_dir, out);
+      $display("r0=%h r1=%h fs=%h dir=%b", dut.first_out, dut.second_out, dut.final_state, dut.rotate_dir);
+
 
       in = 64'h454C555253574F43;
       in_len = 4'd8;
@@ -30,7 +33,7 @@ module hasher_tb ();
       in_len = 4'd6;
       #5 $display("%h,%h,%h",in,in_len,out);
       
-      in = 64'h000000454958454958;
+      in = 64'h0000454958454958;
       in_len = 4'd5;
       #5 $display("%h,%h,%h",in,in_len,out);
       
@@ -56,6 +59,7 @@ module hasher_tb ();
          in = $random;
          in_len = $random;
          #5 $display("%h,%h,%h",in,in_len,out);
+         
       end
       
       

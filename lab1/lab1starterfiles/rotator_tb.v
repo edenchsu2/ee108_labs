@@ -39,11 +39,23 @@ module rotator_tb ();
 
         direction_8 = 1;
         expected_8 = 8'b01000000;
+
         #5
         $display ("%b -> %b, expected %b", in_8, out_8, expected_8);
 
         // Add more test cases here, including edge cases.
-
+        expected_8 = 8'b00100000;
+        distance_8 = 8'd1;
+        #5
+        $display ("%b -> %b, expected %b", in_8, out_8, expected_8);
+        direction_8 = 0;
+        distance_8 = 8'b011;
+        in_8 = 8'b00000100;
+        expected_8 = 8'b10000000;
+        #5
+        $display ("%b -> %b, expected %b", in_8, out_8, expected_8);
+        
+        
 
         ////// 32-bit tests ///////////////////
         // Don't worry about repeating ALL of your 8-bit tests here, the point is
@@ -51,6 +63,20 @@ module rotator_tb ();
         // Basic tests will suffice, edge case tests aren't necessary for this lab
 
         // Add basic 32-bit test cases here
+        direction_32 = 1;
+        distance_32 = 32'b001;
+        in_32 = 32'b001;
+        expected_32 = 32'b010;
+        #5
+        $display ("%b -> %b, expected %b", in_32, out_32, expected_32);
+        
+        direction_32 = 0;
+        distance_32 = 32'b010;
+        in_32 = 32'b01000;
+        expected_32 = 32'b0010;
+        #5
+        $display ("%b -> %b, expected %b", in_32, out_32, expected_32);
+
     end
 
 endmodule

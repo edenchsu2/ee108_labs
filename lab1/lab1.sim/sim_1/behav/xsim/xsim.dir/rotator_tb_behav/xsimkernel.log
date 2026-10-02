@@ -1,0 +1,7 @@
+Running: xsim.dir/rotator_tb_behav/xsimk -simmode gui -wdb rotator_tb_behav.wdb -simrunnum 0 -socket 38797
+Design successfully loaded
+Design Loading Memory Usage: 43760 KB (Peak: 43880 KB)
+Design Loading CPU Usage: 40 ms
+Simulation completed
+Simulation Memory Usage: 129596 KB (Peak: 183028 KB)
+Simulation CPU Usage: 50 ms

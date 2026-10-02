@@ -1,0 +1,18 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../lab1.srcs/sources_1/ip/clk_wiz_0" \
+"../../../../lab1starterfiles/arbiter.v" \
+"../../../../lab1starterfiles/cam.v" \
+"../../../../lab1starterfiles/encoder.v" \
+"../../../../lab1starterfiles/hash_rom.v" \
+"../../../../lab1starterfiles/hash_round.v" \
+"../../../../lab1starterfiles/hasher.v" \
+"../../../../lab1starterfiles/length_finder.v" \
+"../../../../lab1starterfiles/rotator.v" \
+"../../../../lab1starterfiles/verifier.v" \
+"../../../../lab1starterfiles/verifier_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

@@ -1,16 +1,27 @@
 Vivado Simulator 2019.2
 Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
-Running: /cad/xilinx/vivado/2019.2/Vivado/2019.2/bin/unwrapped/lnx64.o/xelab -wto 1373a306121e48fdb9ff08bdddc0daf0 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot cam_tb_behav xil_defaultlib.cam_tb xil_defaultlib.glbl -log elaborate.log 
+Running: /cad/xilinx/vivado/2019.2/Vivado/2019.2/bin/unwrapped/lnx64.o/xelab -wto 1373a306121e48fdb9ff08bdddc0daf0 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot verifier_tb_behav xil_defaultlib.verifier_tb xil_defaultlib.glbl -log elaborate.log 
 Using 8 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 8 for port 'distance' [/home/users/achsu2/Desktop/EE108_Labs/lab1/lab1starterfiles/hash_round.v:41]
+WARNING: [VRFC 10-3091] actual bit length 4 differs from formal bit length 3 for port 'addr' [/home/users/achsu2/Desktop/EE108_Labs/lab1/lab1starterfiles/verifier.v:16]
+WARNING: [VRFC 10-3091] actual bit length 4 differs from formal bit length 3 for port 'addr' [/home/users/achsu2/Desktop/EE108_Labs/lab1/lab1starterfiles/verifier.v:17]
 Completed static elaboration
 Starting simulation data flow analysis
 WARNING: [XSIM 43-4100] "/home/users/achsu2/Desktop/EE108_Labs/lab1/lab1.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.arbiter
 Compiling module xil_defaultlib.encoder
+Compiling module xil_defaultlib.length_finder
+Compiling module xil_defaultlib.rotator
+Compiling module xil_defaultlib.hash_round
+Compiling module xil_defaultlib.rotator(WIDTH=32)
+Compiling module xil_defaultlib.hasher
 Compiling module xil_defaultlib.cam
-Compiling module xil_defaultlib.cam_tb
+Compiling module xil_defaultlib.hash_rom
+Compiling module xil_defaultlib.verifier
+Compiling module xil_defaultlib.verifier_tb
 Compiling module xil_defaultlib.glbl
-Built simulation snapshot cam_tb_behav
+Built simulation snapshot verifier_tb_behav
