@@ -1,0 +1,8 @@
+0.6
+2019.2
+Nov  6 2019
+21:42:20
+/home/users/achsu2/Desktop/EE108_Labs/lab4/lab4.sim/sim_1/behav/xsim/glbl.v,1573089660,verilog,,,,glbl,,,,,,,,
+/home/users/achsu2/Desktop/EE108_Labs/lab4/src/design/ff_lib.v,1793041914,verilog,,/home/users/achsu2/Desktop/EE108_Labs/lab4/src/design/mcu.v,,dff;dffr;dffre,,,,,,,,
+/home/users/achsu2/Desktop/EE108_Labs/lab4/src/design/mcu.v,1793046026,verilog,,/home/users/achsu2/Desktop/EE108_Labs/lab4/src/sim/mcu_tb.v,,mcu,,,,,,,,
+/home/users/achsu2/Desktop/EE108_Labs/lab4/src/sim/mcu_tb.v,1793045695,verilog,,,,mcu_tb,,,,,,,,

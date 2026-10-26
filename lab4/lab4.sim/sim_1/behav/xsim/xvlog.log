@@ -1,0 +1,8 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/users/achsu2/Desktop/EE108_Labs/lab4/src/design/ff_lib.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dff
+INFO: [VRFC 10-311] analyzing module dffr
+INFO: [VRFC 10-311] analyzing module dffre
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/users/achsu2/Desktop/EE108_Labs/lab4/src/design/mcu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mcu
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/users/achsu2/Desktop/EE108_Labs/lab4/src/sim/mcu_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mcu_tb

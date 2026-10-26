@@ -1,0 +1,391 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Mon Oct 26 12:13:58 2026
+# Process ID: 1488776
+# Current directory: /home/users/achsu2/Desktop/EE108_Labs/lab4
+# Command line: vivado
+# Log file: /home/users/achsu2/Desktop/EE108_Labs/lab4/vivado.log
+# Journal file: /home/users/achsu2/Desktop/EE108_Labs/lab4/vivado.jou
+#-----------------------------------------------------------
+start_gui
+source /home/users/achsu2/Desktop/EE108_Labs/lab4/init_project.tcl
+# cd [file dirname [file normalize [info script]]]
+# create_project lab4 ./ -part xc7z020clg400-1 -force
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/cad/xilinx/vivado/2019.2/Vivado/2019.2/data/ip'.
+create_project: Time (s): cpu = 00:00:11 ; elapsed = 00:00:08 . Memory (MB): peak = 6599.820 ; gain = 153.785 ; free physical = 2333 ; free virtual = 117411
+# set_property board_part tul.com.tw:pynq-z2:part0:1.0 [current_project]
+# add_files [ glob ./src/design/* ]
+# add_files -fileset sim_1 [ glob ./src/sim/* ]
+# add_files -fileset constrs_1 ./src/lab4.xdc
+# create_ip -name clk_wiz -vendor xilinx.com -library ip -version 6.0 -module_name clk_wiz_0
+create_ip: Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 6741.324 ; gain = 139.289 ; free physical = 2259 ; free virtual = 117349
+# set_property -dict [list \
+# 	CONFIG.CLK_IN1_BOARD_INTERFACE {sys_clock} \
+# 	CONFIG.CLKOUT2_USED {true} \
+# 	CONFIG.CLKOUT3_USED {true} \
+# 	CONFIG.CLKOUT2_REQUESTED_OUT_FREQ {30.000} \
+# 	CONFIG.CLKOUT3_REQUESTED_OUT_FREQ {150.000} \
+# 	CONFIG.PRIM_IN_FREQ {125.000} \
+# 	CONFIG.CLKIN1_JITTER_PS {80.0} \
+# 	CONFIG.MMCM_DIVCLK_DIVIDE {5} \
+# 	CONFIG.MMCM_CLKFBOUT_MULT_F {42.000} \
+# 	CONFIG.MMCM_CLKIN1_PERIOD {8.000} \
+# 	CONFIG.MMCM_CLKOUT0_DIVIDE_F {10.500} \
+# 	CONFIG.MMCM_CLKOUT1_DIVIDE {35} \
+# 	CONFIG.MMCM_CLKOUT2_DIVIDE {7} \
+# 	CONFIG.NUM_OUT_CLKS {3} \
+# 	CONFIG.CLKOUT1_JITTER {205.508} \
+# 	CONFIG.CLKOUT1_PHASE_ERROR {233.292} \
+# 	CONFIG.CLKOUT2_JITTER {253.016} \
+# 	CONFIG.CLKOUT2_PHASE_ERROR {233.292} \
+# 	CONFIG.CLKOUT3_JITTER {193.443} \
+# 	CONFIG.CLKOUT3_PHASE_ERROR {233.292} \
+# ] [get_ips clk_wiz_0]
+0
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+set_property top mcu_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/users/achsu2/Desktop/EE108_Labs/lab4/lab4.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/cad/xilinx/vivado/2019.2/Vivado/2019.2/data/xsim/xsim.ini' copied to run dir:'/home/users/achsu2/Desktop/EE108_Labs/lab4/lab4.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'mcu_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/users/achsu2/Desktop/EE108_Labs/lab4/lab4.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj mcu_tb_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/users/achsu2/Desktop/EE108_Labs/lab4/src/design/ff_lib.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dff
+INFO: [VRFC 10-311] analyzing module dffr
+INFO: [VRFC 10-311] analyzing module dffre
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/users/achsu2/Desktop/EE108_Labs/lab4/src/design/mcu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mcu
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/users/achsu2/Desktop/EE108_Labs/lab4/src/sim/mcu_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mcu_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/users/achsu2/Desktop/EE108_Labs/lab4/lab4.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/users/achsu2/Desktop/EE108_Labs/lab4/lab4.sim/sim_1/behav/xsim'
+xelab -wto 9f10febf749a409398ae5ba9a6cef748 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot mcu_tb_behav xil_defaultlib.mcu_tb xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: /cad/xilinx/vivado/2019.2/Vivado/2019.2/bin/unwrapped/lnx64.o/xelab -wto 9f10febf749a409398ae5ba9a6cef748 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot mcu_tb_behav xil_defaultlib.mcu_tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 2 differs from formal bit length 1 for port 'd' [/home/users/achsu2/Desktop/EE108_Labs/lab4/src/design/mcu.v:15]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "/home/users/achsu2/Desktop/EE108_Labs/lab4/src/design/mcu.v" Line 1. Module mcu doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/users/achsu2/Desktop/EE108_Labs/lab4/src/design/ff_lib.v" Line 16. Module dffr doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/users/achsu2/Desktop/EE108_Labs/lab4/src/design/ff_lib.v" Line 16. Module dffr doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.dffr
+Compiling module xil_defaultlib.mcu
+Compiling module xil_defaultlib.mcu_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot mcu_tb_behav
+
+****** Webtalk v2019.2 (64-bit)
+  **** SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
+  **** IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source /home/users/achsu2/Desktop/EE108_Labs/lab4/lab4.sim/sim_1/behav/xsim/xsim.dir/mcu_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Mon Oct 26 13:15:23 2026...
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/users/achsu2/Desktop/EE108_Labs/lab4/lab4.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "mcu_tb_behav -key {Behavioral:sim_1:Functional:mcu_tb} -tclbatch {mcu_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+source mcu_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+FAIL at time 6000: play=0 (expected 0), song=Z (expected 0)
+FAIL at time 26000: play=1 (expected 1), song=Z (expected 0)
+FAIL at time 36000: play=0 (expected 0), song=Z (expected 0)
+FAIL at time 46000: play=1 (expected 1), song=Z (expected 0)
+FAIL at time 56000: play=0 (expected 0), song=X (expected 1)
+FAIL at time 66000: play=1 (expected 1), song=X (expected 1)
+FAIL at time 76000: play=0 (expected 0), song=X (expected 2)
+FAIL at time 86000: play=0 (expected 0), song=X (expected 3)
+FAIL at time 96000: play=0 (expected 0), song=X (expected 0)
+FAIL at time 106000: play=1 (expected 1), song=X (expected 0)
+FAIL at time 116000: play=0 (expected 0), song=X (expected 1)
+Testbench finished.
+$finish called at time : 116 ns : File "/home/users/achsu2/Desktop/EE108_Labs/lab4/src/sim/mcu_tb.v" Line 116
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'mcu_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:12 ; elapsed = 00:00:11 . Memory (MB): peak = 7479.703 ; gain = 452.770 ; free physical = 5901 ; free virtual = 120763
+update_compile_order -fileset sim_1
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/users/achsu2/Desktop/EE108_Labs/lab4/lab4.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/cad/xilinx/vivado/2019.2/Vivado/2019.2/data/xsim/xsim.ini' copied to run dir:'/home/users/achsu2/Desktop/EE108_Labs/lab4/lab4.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'mcu_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/users/achsu2/Desktop/EE108_Labs/lab4/lab4.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj mcu_tb_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/users/achsu2/Desktop/EE108_Labs/lab4/src/design/ff_lib.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dff
+INFO: [VRFC 10-311] analyzing module dffr
+INFO: [VRFC 10-311] analyzing module dffre
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/users/achsu2/Desktop/EE108_Labs/lab4/src/design/mcu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mcu
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/users/achsu2/Desktop/EE108_Labs/lab4/src/sim/mcu_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mcu_tb
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/users/achsu2/Desktop/EE108_Labs/lab4/lab4.sim/sim_1/behav/xsim'
+xelab -wto 9f10febf749a409398ae5ba9a6cef748 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot mcu_tb_behav xil_defaultlib.mcu_tb xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: /cad/xilinx/vivado/2019.2/Vivado/2019.2/bin/unwrapped/lnx64.o/xelab -wto 9f10febf749a409398ae5ba9a6cef748 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot mcu_tb_behav xil_defaultlib.mcu_tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 2 differs from formal bit length 1 for port 'd' [/home/users/achsu2/Desktop/EE108_Labs/lab4/src/design/mcu.v:15]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "/home/users/achsu2/Desktop/EE108_Labs/lab4/src/design/mcu.v" Line 1. Module mcu doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/users/achsu2/Desktop/EE108_Labs/lab4/src/design/ff_lib.v" Line 16. Module dffr doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/users/achsu2/Desktop/EE108_Labs/lab4/src/design/ff_lib.v" Line 16. Module dffr doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.dffr
+Compiling module xil_defaultlib.mcu
+Compiling module xil_defaultlib.mcu_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot mcu_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/users/achsu2/Desktop/EE108_Labs/lab4/lab4.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "mcu_tb_behav -key {Behavioral:sim_1:Functional:mcu_tb} -tclbatch {mcu_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+source mcu_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+FAIL at time 6000: play=0 (expected 0), song=Z (expected 0)
+FAIL at time 26000: play=1 (expected 1), song=Z (expected 0)
+FAIL at time 36000: play=0 (expected 0), song=Z (expected 0)
+FAIL at time 46000: play=1 (expected 1), song=Z (expected 0)
+FAIL at time 56000: play=0 (expected 0), song=X (expected 1)
+FAIL at time 66000: play=1 (expected 1), song=X (expected 1)
+FAIL at time 76000: play=0 (expected 0), song=X (expected 2)
+FAIL at time 86000: play=0 (expected 0), song=X (expected 3)
+FAIL at time 96000: play=0 (expected 0), song=X (expected 0)
+FAIL at time 106000: play=1 (expected 1), song=X (expected 0)
+FAIL at time 116000: play=0 (expected 0), song=X (expected 1)
+Testbench finished.
+$finish called at time : 116 ns : File "/home/users/achsu2/Desktop/EE108_Labs/lab4/src/sim/mcu_tb.v" Line 116
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'mcu_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 7505.715 ; gain = 26.012 ; free physical = 5816 ; free virtual = 120749
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/users/achsu2/Desktop/EE108_Labs/lab4/lab4.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/cad/xilinx/vivado/2019.2/Vivado/2019.2/data/xsim/xsim.ini' copied to run dir:'/home/users/achsu2/Desktop/EE108_Labs/lab4/lab4.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'mcu_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/users/achsu2/Desktop/EE108_Labs/lab4/lab4.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj mcu_tb_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/users/achsu2/Desktop/EE108_Labs/lab4/src/design/ff_lib.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dff
+INFO: [VRFC 10-311] analyzing module dffr
+INFO: [VRFC 10-311] analyzing module dffre
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/users/achsu2/Desktop/EE108_Labs/lab4/src/design/mcu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mcu
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/users/achsu2/Desktop/EE108_Labs/lab4/src/sim/mcu_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mcu_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/users/achsu2/Desktop/EE108_Labs/lab4/lab4.sim/sim_1/behav/xsim'
+xelab -wto 9f10febf749a409398ae5ba9a6cef748 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot mcu_tb_behav xil_defaultlib.mcu_tb xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: /cad/xilinx/vivado/2019.2/Vivado/2019.2/bin/unwrapped/lnx64.o/xelab -wto 9f10febf749a409398ae5ba9a6cef748 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot mcu_tb_behav xil_defaultlib.mcu_tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 2 differs from formal bit length 1 for port 'd' [/home/users/achsu2/Desktop/EE108_Labs/lab4/src/design/mcu.v:15]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "/home/users/achsu2/Desktop/EE108_Labs/lab4/src/design/mcu.v" Line 1. Module mcu doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/users/achsu2/Desktop/EE108_Labs/lab4/src/design/ff_lib.v" Line 16. Module dffr doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/users/achsu2/Desktop/EE108_Labs/lab4/src/design/ff_lib.v" Line 16. Module dffr doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.dffr
+Compiling module xil_defaultlib.mcu
+Compiling module xil_defaultlib.mcu_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot mcu_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/users/achsu2/Desktop/EE108_Labs/lab4/lab4.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "mcu_tb_behav -key {Behavioral:sim_1:Functional:mcu_tb} -tclbatch {mcu_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+source mcu_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+FAIL at time 6000: play=0 (expected 0), song=x (expected 0)
+FAIL at time 26000: play=1 (expected 1), song=x (expected 0)
+FAIL at time 36000: play=0 (expected 0), song=x (expected 0)
+FAIL at time 46000: play=1 (expected 1), song=x (expected 0)
+FAIL at time 56000: play=0 (expected 0), song=x (expected 1)
+FAIL at time 66000: play=1 (expected 1), song=x (expected 1)
+FAIL at time 76000: play=0 (expected 0), song=x (expected 2)
+FAIL at time 86000: play=0 (expected 0), song=x (expected 3)
+FAIL at time 96000: play=0 (expected 0), song=x (expected 0)
+FAIL at time 106000: play=1 (expected 1), song=x (expected 0)
+FAIL at time 116000: play=0 (expected 0), song=x (expected 1)
+Testbench finished.
+$finish called at time : 116 ns : File "/home/users/achsu2/Desktop/EE108_Labs/lab4/src/sim/mcu_tb.v" Line 116
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'mcu_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 7524.980 ; gain = 19.266 ; free physical = 5575 ; free virtual = 120709
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/users/achsu2/Desktop/EE108_Labs/lab4/lab4.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/cad/xilinx/vivado/2019.2/Vivado/2019.2/data/xsim/xsim.ini' copied to run dir:'/home/users/achsu2/Desktop/EE108_Labs/lab4/lab4.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'mcu_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/users/achsu2/Desktop/EE108_Labs/lab4/lab4.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj mcu_tb_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/users/achsu2/Desktop/EE108_Labs/lab4/src/design/ff_lib.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dff
+INFO: [VRFC 10-311] analyzing module dffr
+INFO: [VRFC 10-311] analyzing module dffre
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/users/achsu2/Desktop/EE108_Labs/lab4/src/design/mcu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mcu
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/users/achsu2/Desktop/EE108_Labs/lab4/src/sim/mcu_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mcu_tb
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/users/achsu2/Desktop/EE108_Labs/lab4/lab4.sim/sim_1/behav/xsim'
+xelab -wto 9f10febf749a409398ae5ba9a6cef748 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot mcu_tb_behav xil_defaultlib.mcu_tb xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: /cad/xilinx/vivado/2019.2/Vivado/2019.2/bin/unwrapped/lnx64.o/xelab -wto 9f10febf749a409398ae5ba9a6cef748 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot mcu_tb_behav xil_defaultlib.mcu_tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "/home/users/achsu2/Desktop/EE108_Labs/lab4/src/design/mcu.v" Line 1. Module mcu doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/users/achsu2/Desktop/EE108_Labs/lab4/src/design/ff_lib.v" Line 16. Module dffr doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/users/achsu2/Desktop/EE108_Labs/lab4/src/design/ff_lib.v" Line 16. Module dffr(WIDTH=2) doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.dffr
+Compiling module xil_defaultlib.dffr(WIDTH=2)
+Compiling module xil_defaultlib.mcu
+Compiling module xil_defaultlib.mcu_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot mcu_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/users/achsu2/Desktop/EE108_Labs/lab4/lab4.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "mcu_tb_behav -key {Behavioral:sim_1:Functional:mcu_tb} -tclbatch {mcu_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+source mcu_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+PASS at time 6000: play=0, song=0
+PASS at time 26000: play=1, song=0
+PASS at time 36000: play=0, song=0
+PASS at time 46000: play=1, song=0
+PASS at time 56000: play=0, song=1
+PASS at time 66000: play=1, song=1
+PASS at time 76000: play=0, song=2
+PASS at time 86000: play=0, song=3
+PASS at time 96000: play=0, song=0
+PASS at time 106000: play=1, song=0
+PASS at time 116000: play=0, song=1
+Testbench finished.
+$finish called at time : 116 ns : File "/home/users/achsu2/Desktop/EE108_Labs/lab4/src/sim/mcu_tb.v" Line 116
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'mcu_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 7542.988 ; gain = 18.008 ; free physical = 5583 ; free virtual = 120779
