@@ -21,6 +21,7 @@ module mcu(
     assign next_song = advance_song ? song + 2'b1 : song;
     
     assign play = state;
+    assign reset_player = advance_song; //this was missing
     
 
 endmodule
