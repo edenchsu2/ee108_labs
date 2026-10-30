@@ -16,7 +16,6 @@ module sine_reader_tb();
     // Clock and reset
     initial begin
         clk = 1'b0;
-        repeat (4) #5 clk = ~clk;
         forever #5 clk = ~clk;
     end
     
