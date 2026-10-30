@@ -22,13 +22,8 @@ module note_player_tb();
         .sample_out(sample_out),
         .new_sample_ready(new_sample_ready)
     );
-
-    beat_generator #(.WIDTH(17), .STOP(1500)) beat_generator(
-        .clk(clk),
-        .reset(reset),
-        .en(1'b1),
-        .beat(beat)
-    );
+    
+ 
 
     // Clock and reset
     initial begin
@@ -38,9 +33,49 @@ module note_player_tb();
         reset = 1'b0;
         forever #5 clk = ~clk;
     end
+    
+     beat_generator #(.WIDTH(17), .STOP(300)) beat_gen(
+        .clk(clk),
+        .reset(reset),
+        .en(1'b1),
+        .beat(beat)
+    );
 
     // Tests
     initial begin
+        
+        #20
+        reset = 0;
+        
+        note_to_load = 6'b001010;
+        duration_to_load = 6'b000010;
+        load_new_note = 1;
+        play_enable = 1;
+        generate_next_sample = 1;
+        
+        #30    
+        load_new_note = 0;
+        $display("Expected %d for duration load", duration_to_load);
+
+        #20000
+        duration_to_load = 6'b000100;
+        note_to_load = 6'b111111;
+        load_new_note = 1;
+        
+        #2000
+        load_new_note = 0;
+        
+        #2000
+        play_enable = 0;
+        
+        #8000
+        play_enable=1;
+        
+        
+     
+        
+
+        $display("Hello hello");
 
     end
 
